@@ -1,0 +1,665 @@
+/* =========================
+   GENERAL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background-color: #e8e3df;
+    color: #414143;
+}
+
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+.disclaimer {
+    position: fixed;
+    top: 12px;
+    right: 15px;
+    z-index: 1000;
+
+    font-size: 11px;
+    color: #e8e3df;
+    background-color: #414143;
+
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+#home {
+    min-height: 100vh;
+    position: relative;
+    padding: 0;
+
+    background: linear-gradient(
+        to right,
+        #594752 0%,
+        #594752 50%,
+        #867c7d 50%,
+        #867c7d 100%
+    );
+}
+
+#home .content {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+
+    padding: 0;
+
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+
+    position: relative;
+}
+
+
+/* Hide old Home heading */
+
+#home .content h2 {
+    display: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: absolute;
+
+    top: 50%;
+    left: 25%;
+
+    transform: translate(-50%, -50%);
+
+    width: 240px;
+    padding: 35px 25px;
+
+    background-color: #e8e3df;
+    color: #414143;
+
+    text-align: center;
+
+    z-index: 10;
+
+    box-shadow: 0 8px 20px rgba(65, 65, 67, 0.25);
+}
+
+header h1 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+    line-height: 1.15;
+
+    margin: 0 0 30px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+nav a {
+    color: #594752;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    padding: 7px 10px;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #7b6b7a;
+    color: #e8e3df;
+}
+
+
+/* =========================
+   HOME PHOTOS
+========================= */
+
+.photos {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+
+    padding: 110px 8% 60px 12%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    gap: 25px;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.photos img {
+    width: 100%;
+    max-width: 210px;
+    height: 210px;
+
+    object-fit: cover;
+
+    padding: 10px;
+
+    background-color: #e8e3df;
+
+    border: 5px solid #bab8b5;
+
+    box-shadow: 0 8px 18px rgba(65, 65, 67, 0.3);
+
+    transition: transform 0.3s ease;
+}
+
+.photos img:hover {
+    transform: translateY(-5px) rotate(1deg);
+}
+
+.photos img:nth-child(3) {
+    grid-column: 1 / 3;
+}
+
+
+/* =========================
+   SECOND PAGE
+========================= */
+
+#about {
+    min-height: 100vh;
+
+    padding: 70px 6% 60px;
+
+    background-color: #e8e3df;
+}
+
+#about .content {
+    width: 100%;
+    max-width: none;
+
+    padding: 40px;
+
+    background-color: transparent;
+
+    box-shadow: none;
+    border-radius: 0;
+
+    text-align: left;
+
+    display: grid;
+
+    grid-template-columns: 7fr 3fr;
+
+    column-gap: 35px;
+}
+
+
+/* About Me heading */
+
+#about .content h2 {
+    grid-column: 1 / 3;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    color: #414143;
+
+    margin: 0 0 35px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #7b6b7a;
+}
+
+
+/* About Me text */
+
+#about .content p,
+#about .content h3,
+#about .content ul {
+    grid-column: 1;
+}
+
+#about .content p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin: 8px 0;
+}
+
+#about .content h3 {
+    font-family: Georgia, serif;
+
+    color: #594752;
+
+    font-size: 23px;
+
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+#about .content ul {
+    margin-top: 5px;
+
+    padding-left: 25px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   HOBBIES
+========================= */
+
+#hobbies {
+    position: absolute;
+
+    width: 27%;
+
+    right: 6%;
+
+    top: 100vh;
+
+    padding: 0;
+
+    background-color: #7b6b7a;
+
+    color: #e8e3df;
+}
+
+#hobbies .content {
+    width: 100%;
+
+    padding: 30px;
+
+    background-color: transparent;
+
+    box-shadow: none;
+    border-radius: 0;
+
+    text-align: left;
+}
+
+#hobbies .content h2 {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    margin: 0 0 15px;
+
+    color: #e8e3df;
+}
+
+#hobbies ul {
+    padding-left: 22px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    position: absolute;
+
+    width: 27%;
+
+    right: 6%;
+
+    top: calc(100vh + 240px);
+
+    padding: 0;
+
+    background-color: #594752;
+
+    color: #e8e3df;
+}
+
+#contact .content {
+    width: 100%;
+
+    padding: 30px;
+
+    background-color: transparent;
+
+    box-shadow: none;
+    border-radius: 0;
+
+    text-align: left;
+}
+
+#contact .content h2 {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    margin: 0 0 20px;
+
+    color: #e8e3df;
+}
+
+#contact p {
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+#contact a {
+    color: #e8e3df;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #bab8b5;
+}
+
+#contact a:hover {
+    color: #bab8b5;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    /* -------------------------
+       HOME
+    ------------------------- */
+
+    #home {
+        min-height: 100vh;
+        height: 100vh;
+
+        background: linear-gradient(
+            to bottom,
+            #594752 0%,
+            #594752 50%,
+            #867c7d 50%,
+            #867c7d 100%
+        );
+    }
+
+    #home .content {
+        height: 100vh;
+    }
+
+
+    /* -------------------------
+       MOBILE NAVIGATION
+    ------------------------- */
+
+    header {
+        top: 0;
+        left: 0;
+
+        transform: none;
+
+        width: 100%;
+        height: 50%;
+
+        padding: 55px 20px 20px;
+
+        background-color: transparent;
+
+        color: #e8e3df;
+
+        box-shadow: none;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        z-index: 10;
+    }
+
+    header h1 {
+        position: absolute;
+
+        bottom: -28px;
+
+        margin: 0;
+
+        width: 75%;
+
+        padding: 12px 15px;
+
+        background-color: #e8e3df;
+
+        color: #414143;
+
+        font-size: 24px;
+
+        text-align: center;
+
+        box-shadow: 0 6px 15px rgba(65, 65, 67, 0.3);
+
+        z-index: 20;
+    }
+
+    nav {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 5px;
+
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        color: #e8e3df;
+
+        font-size: 13px;
+
+        padding: 7px 9px;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* -------------------------
+       MOBILE PHOTOS
+    ------------------------- */
+
+    .photos {
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 50%;
+
+        padding: 55px 25px 30px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: 1fr 1fr;
+
+        gap: 5px;
+
+        align-items: center;
+
+        justify-items: center;
+
+        z-index: 5;
+    }
+
+    .photos img {
+        width: 135px;
+        height: 135px;
+
+        padding: 7px;
+
+        background-color: #e8e3df;
+
+        border: 4px solid #bab8b5;
+
+        box-shadow: 0 7px 15px rgba(65, 65, 67, 0.35);
+    }
+
+
+    /* Top-left photo */
+
+    .photos img:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+
+        transform: translate(10px, 10px) rotate(-4deg);
+    }
+
+
+    /* Top-right photo */
+
+    .photos img:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+
+        transform: translate(-10px, 10px) rotate(4deg);
+    }
+
+
+    /* Bottom-center photo */
+
+    .photos img:nth-child(3) {
+        grid-column: 1 / 3;
+        grid-row: 2;
+
+        transform: translateY(-8px) rotate(-1deg);
+    }
+
+
+    /* -------------------------
+       DISCLAIMER
+    ------------------------- */
+
+    .disclaimer {
+        top: 7px;
+        right: 7px;
+
+        font-size: 9px;
+
+        padding: 5px 7px;
+
+        z-index: 100;
+    }
+
+
+    /* -------------------------
+       SECOND PAGE
+    ------------------------- */
+
+    #about {
+        min-height: auto;
+
+        padding: 45px 20px 30px;
+
+        background-color: #e8e3df;
+    }
+
+    #about .content {
+        display: block;
+
+        padding: 15px;
+
+        text-align: left;
+    }
+
+    #about .content h2 {
+        font-size: 34px;
+
+        margin-bottom: 25px;
+    }
+
+    #about .content p {
+        font-size: 15px;
+    }
+
+    #about .content h3 {
+        font-size: 21px;
+    }
+
+
+    /* -------------------------
+       MOBILE HOBBIES
+    ------------------------- */
+
+    #hobbies {
+        position: static;
+
+        width: 100%;
+
+        margin: 0;
+
+        background-color: #7b6b7a;
+    }
+
+    #hobbies .content {
+        padding: 28px;
+    }
+
+
+    /* -------------------------
+       MOBILE CONTACT
+    ------------------------- */
+
+    #contact {
+        position: static;
+
+        width: 100%;
+
+        margin: 0;
+
+        background-color: #594752;
+    }
+
+    #contact .content {
+        padding: 28px;
+    }
+}
